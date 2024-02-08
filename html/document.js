@@ -157,7 +157,7 @@ const style = {
 	// hueGroup: 255,
 	// lightGroup: 1,
 	lightCut: 128,
-	darkCut: 118,
+	darkCut: 113,
 	denoise: true,
 };
 
@@ -258,8 +258,8 @@ app = new Vue({
 		save(){
 			const { canvas } = app.$refs;
 			// URL.createObjectURL()
-			app.output = canvas.toDataURL('image/jpeg',.9);
-			app.downloadFilename = `[lab.magiconch.com][One-Last-Image]-${+Date.now()}.jpg`;
+			app.output = canvas.toDataURL('image/png',1.0);
+			app.downloadFilename = `[lab.magiconch.com][One-Last-Image]-${+Date.now()}.png`;
 		},
 		saveDiff(){
 			const { img,canvas } = app.$refs;
@@ -279,8 +279,8 @@ app = new Vue({
 				0,canvas.height,
 				canvas.width,canvas.height,
 			);
-			app.output = mixCanvas.toDataURL('image/jpeg',.9);
-			app.downloadFilename = `[lab.magiconch.com][One-Last-Image]-diff-${+Date.now()}.jpg`;
+			app.output = mixCanvas.toDataURL('image/png',1.0);
+			app.downloadFilename = `[lab.magiconch.com][One-Last-Image]-diff-${+Date.now()}.png`;
 
 		},
 		saveDiff2(){
@@ -313,8 +313,8 @@ app = new Vue({
 			const pattern = mixCanvasCtx.createPattern(img, 'no-repeat');
 			mixCanvasCtx.fillStyle = pattern;
     		mixCanvasCtx.fill(); 
-			app.output = mixCanvas.toDataURL('image/jpeg',.9);
-			app.downloadFilename = `[lab.magiconch.com][One-Last-Image]-diff2-${+Date.now()}.jpg`;
+			app.output = mixCanvas.toDataURL('image/png',1.0);
+			app.downloadFilename = `[lab.magiconch.com][One-Last-Image]-diff2-${+Date.now()}.png`;
 
 		},
 		_saveDiff2(ms = 100){
