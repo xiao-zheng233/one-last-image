@@ -54,11 +54,11 @@ const louvre = async ({img, outputCanvas, config, callback}) => {
 	let _width  = Math.round( oriWidth   / config.zoom );
 	let _height = Math.round( oriHeight  / config.zoom );
 
-	const maxWidth = 1920;
-	if(_width > maxWidth){
-		_height = _height * maxWidth / _width
-		_width = maxWidth
-	}
+	// const maxWidth = 1920;
+	// if(_width > maxWidth){
+	// 	_height = _height * maxWidth / _width
+	// 	_width = maxWidth
+	// }
 	// const _width = 800;
 	// const _height = 800;
 
